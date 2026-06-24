@@ -45,7 +45,7 @@ See [ROADMAP.md](ROADMAP.md) for the detailed learning plan.
 |---|---:|---|
 | Cache latency pointer chasing | Done | `labs/01_memory_hierarchy/cache_latency/` |
 | Sequential vs random access | Done | `labs/01_memory_hierarchy/sequential_vs_random/` |
-| Cache line effect | Planned | `labs/01_memory_hierarchy/cache_line_effect/` |
+| Cache line effect | Done | `labs/01_memory_hierarchy/cache_line_effect/` |
 | TLB latency | Planned | `labs/02_virtual_memory/tlb_latency/` |
 | Process tree | Planned | `labs/03_process_thread/process_tree/` |
 | Context switch | Planned | `labs/03_process_thread/context_switch/` |

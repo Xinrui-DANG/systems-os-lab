@@ -1,0 +1,24 @@
+# Build outputs
+build/
+*/build/
+*/*.o
+*.o
+*.out
+
+# Generated experiment output
+results/raw/*
+results/processed/*
+results/figures/*
+labs/**/results/*.csv
+labs/**/results/*.txt
+labs/**/results/*.png
+
+# Keep result directories
+!results/raw/.gitkeep
+!results/processed/.gitkeep
+!results/figures/.gitkeep
+!results/machine_profiles/.gitkeep
+!labs/**/results/.gitkeep
+
+# Editor and OS noise
+.DS_Store

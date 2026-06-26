@@ -16,18 +16,7 @@ Memory
   -> Heterogeneous Runtime
 ```
 
-The high-end research target is accelerator partitioning with real-time reasoning:
-
-```text
-GPU/NPU resource sharing
-  -> SM / partition-style allocation
-  -> DMA / IOMMU isolation
-  -> memory bandwidth and cache interference
-  -> accelerator scheduling
-  -> WCRT / WCET analysis
-```
-
-This is deliberately marked as long-term. The repository must first build the measurable OS foundations.
+High-end accelerator and real-time research targets are tracked separately in [long-term-plan/](long-term-plan/). They are deliberately marked as long-term; the repository must first build the measurable OS foundations.
 
 ## Repository Layers
 
@@ -64,13 +53,11 @@ A long-term Unix-like kernel project for QEMU:
 Connect the basic mechanisms to the research/industry direction:
 
 - runtime isolation
-- hypervisor and IOMMU concepts
-- automotive heterogeneous SoC platforms
-- GPU/NPU/DMA interference
-- accelerator resource partitioning
-- SM / MIG / MPS-style sharing concepts
-- WCRT/WCET degradation
-- real-time jitter measurement
+- heterogeneous runtime behavior
+- real-time interference analysis
+- isolation and virtualization concepts
+
+Detailed long-term research ideas are kept in [long-term-plan/](long-term-plan/) so the roadmap stays focused on the current implementation path.
 
 ## Priority Order
 
@@ -156,7 +143,7 @@ Required experiments:
 - command queues
 - accelerator runtime scheduling
 - memory bandwidth interference
-- fake GPU/NPU scheduler
+- accelerator scheduler simulation
 - IOMMU-like isolation
 
 ## Final Target
@@ -174,11 +161,4 @@ Application behavior
 
 That is the path from classic OS mechanisms toward an automotive heterogeneous trusted computing platform.
 
-Long-term research question:
-
-```text
-Can CPU/GPU/NPU tasks share heterogeneous resources while bounding interference
-and preserving real-time response-time requirements?
-```
-
-See [docs/accelerator_realtime_goal.md](docs/accelerator_realtime_goal.md).
+Long-term research questions are listed in [long-term-plan/research_questions.md](long-term-plan/research_questions.md).

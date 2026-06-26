@@ -8,7 +8,7 @@ Scaffolded. Experiments are designed but not implemented yet.
 
 Study how an operating system or runtime manages accelerators through shared memory, command queues, DMA, IOMMU-like isolation, scheduling, and interference control.
 
-Long-term, this module is the bridge toward GPU/NPU resource sharing, SM or partition-style allocation, command-queue scheduling, and accelerator runtime models. It does not currently claim to implement CUDA, MPS, MIG, or physical SM binding.
+Long-term accelerator research ideas are tracked separately in [../../long-term-plan/](../../long-term-plan/). This module only provides the OS/runtime foundation.
 
 ## Core Questions
 
@@ -32,14 +32,7 @@ Long-term, this module is the bridge toward GPU/NPU resource sharing, SM or part
 
 ## Long-Term Direction
 
-Future experiments may study:
-
-- GPU kernel latency baseline, if hardware is available
-- concurrent GPU workload interference
-- command-queue scheduling policies
-- MPS/MIG/SM-limit behavior, if the platform supports it
-- memory bandwidth interference from accelerator-style workloads
-- simple accelerator response-time models
+See [../../long-term-plan/experiment_chain.md](../../long-term-plan/experiment_chain.md) for hardware-dependent accelerator experiments that may be added later.
 
 ## Build
 
@@ -69,4 +62,4 @@ See `analysis_zh.md`.
 
 ## Connection to Modern Systems
 
-This module connects OS mechanisms to GPU/NPU runtimes, DMA isolation, automotive SoCs, and interference between untrusted AI workloads and real-time safety domains.
+This module connects OS mechanisms to accelerator runtimes, DMA isolation, and heterogeneous SoC concepts.

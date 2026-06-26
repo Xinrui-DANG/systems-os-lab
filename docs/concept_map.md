@@ -14,8 +14,7 @@ Application Behavior
   -> Interference
   -> Isolation Boundary
   -> Device / Accelerator Runtime
-  -> Accelerator Resource Partitioning
-  -> WCRT / WCET-Aware Heterogeneous Scheduling
+  -> Heterogeneous Runtime Analysis
 ```
 
 ## Research Direction
@@ -23,21 +22,11 @@ Application Behavior
 ```text
 Automotive heterogeneous SoC
   -> Linux / RTOS / QNX coexistence
-  -> Hypervisor / Jailhouse-style partitioning
-  -> IOMMU and DMA isolation
-  -> GPU/NPU interference
-  -> SM / partition-style resource allocation
-  -> WCRT/WCET degradation
   -> Runtime isolation
+  -> Real-time interference analysis
+  -> Heterogeneous runtime behavior
 ```
 
 ## Long-Term Research Target
 
-```text
-OS virtual memory
-  -> GPU virtual address / IOMMU / page migration
-  -> accelerator task isolation
-  -> memory-interference control
-  -> SM / GPU partitioning
-  -> real-time response-time analysis
-```
+Detailed long-term accelerator partitioning and real-time analysis goals are collected separately in [../long-term-plan/](../long-term-plan/).

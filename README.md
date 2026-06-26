@@ -31,17 +31,7 @@ Memory
   -> Heterogeneous Runtime
 ```
 
-Long-term, the repository builds toward accelerator resource partitioning and real-time analysis:
-
-```text
-GPU/NPU resource sharing
-  -> DMA / IOMMU isolation
-  -> memory and cache interference
-  -> accelerator scheduling
-  -> WCRT / WCET-aware heterogeneous systems
-```
-
-This is a research direction, not a current implementation claim. See [docs/accelerator_realtime_goal.md](docs/accelerator_realtime_goal.md).
+Long-term accelerator and real-time research ideas are tracked separately in [long-term-plan/](long-term-plan/). They guide the direction but are not current implementation claims.
 
 ## Structure
 
@@ -50,6 +40,7 @@ This is a research direction, not a current implementation claim. See [docs/acce
 | `labs/` | Observable user-space experiments |
 | `mini-kernel/` | Long-term Unix-like kernel project |
 | `docs/` | Concept maps, terminology, curated notes, references |
+| `long-term-plan/` | Research directions that guide the repository but are not current implementation claims |
 | `results/` | Cross-module experiment outputs |
 | `tools/` | Repository-level helper tools |
 

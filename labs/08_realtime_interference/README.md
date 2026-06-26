@@ -8,7 +8,7 @@ Scaffolded. Experiments are designed but not implemented yet.
 
 Measure how periodic task latency and jitter change under CPU, memory, cache, and I/O interference.
 
-Long-term, this module provides the timing-analysis side of GPU/NPU interference studies: average latency is not enough; the key question is whether worst-case response time can remain within a deadline.
+Long-term accelerator-aware timing questions are tracked separately in [../../long-term-plan/](../../long-term-plan/). This module focuses on measurable CPU-side latency and interference first.
 
 ## Core Questions
 
@@ -31,24 +31,7 @@ Long-term, this module provides the timing-analysis side of GPU/NPU interference
 
 ## Long-Term Direction
 
-Future accelerator-aware analysis should model a task as:
-
-```text
-Task_i =
-  CPU segment
-  + DMA/copy segment
-  + GPU/NPU compute segment
-  + blocking
-  + interference
-```
-
-The long-term question is:
-
-```text
-R_i <= D_i ?
-```
-
-where `R_i` is response time and `D_i` is the deadline.
+See [../../long-term-plan/research_questions.md](../../long-term-plan/research_questions.md) for the future response-time questions that build on this module.
 
 ## Build
 
@@ -77,4 +60,4 @@ See `analysis_zh.md`.
 
 ## Connection to Modern Systems
 
-This module maps directly to RTOS/QNX/Linux safety-domain jitter, untrusted AI workload interference, and WCRT/WCET degradation on heterogeneous platforms.
+This module maps directly to RTOS/QNX/Linux safety-domain jitter and WCRT/WCET-style latency reporting.

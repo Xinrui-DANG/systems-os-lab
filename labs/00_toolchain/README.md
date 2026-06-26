@@ -1,5 +1,9 @@
 # 00 Toolchain
 
+## Status
+
+Scaffolded. The module defines the measurement setup plan; implementation will be added incrementally.
+
 ## Goal
 
 Set up the measurement tools used by the rest of the repository.

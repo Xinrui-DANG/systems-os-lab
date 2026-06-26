@@ -1,5 +1,9 @@
 # 02 Virtual Memory
 
+## Status
+
+Scaffolded / Next implementation target. Experiments are designed but not implemented yet.
+
 ## Goal
 
 Study how virtual addresses are translated, mapped, faulted in, and protected by the operating system and hardware MMU.

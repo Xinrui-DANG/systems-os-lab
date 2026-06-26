@@ -1,5 +1,9 @@
 # 04 Syscall / Interrupt
 
+## Status
+
+Scaffolded. Experiments are designed but not implemented yet.
+
 ## Goal
 
 Study the boundary between user space and kernel space through syscalls, signals, timers, and interrupt-like wakeup behavior.

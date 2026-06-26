@@ -1,5 +1,9 @@
 # 07 Heterogeneous Computing
 
+## Status
+
+Scaffolded. Experiments are designed but not implemented yet.
+
 ## Goal
 
 Study how an operating system or runtime manages accelerators through shared memory, command queues, DMA, IOMMU-like isolation, scheduling, and interference control.

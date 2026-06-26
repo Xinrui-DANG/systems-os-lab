@@ -1,5 +1,9 @@
 # 05 Synchronization
 
+## Status
+
+Scaffolded. Experiments are designed but not implemented yet.
+
 ## Goal
 
 Study mutexes, spinlocks, atomics, condition variables, producer-consumer queues, and contention.

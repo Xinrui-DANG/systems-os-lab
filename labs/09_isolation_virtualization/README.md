@@ -1,5 +1,9 @@
 # 09 Isolation / Virtualization
 
+## Status
+
+Scaffolded. Experiments and concept notes are designed but not implemented yet.
+
 ## Goal
 
 Understand process isolation, memory protection, shared-memory channels, sandboxing, hypervisor concepts, and IOMMU/device isolation.

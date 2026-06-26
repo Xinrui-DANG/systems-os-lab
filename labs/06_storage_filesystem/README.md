@@ -1,5 +1,9 @@
 # 06 Storage / File System
 
+## Status
+
+Scaffolded / Later. This module is useful but not the current main line.
+
 ## Goal
 
 Study file descriptors, buffered I/O, page cache, `mmap` file I/O, `fsync`, and direct I/O.

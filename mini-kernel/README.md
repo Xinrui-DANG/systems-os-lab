@@ -1,5 +1,9 @@
 # Mini-Kernel
 
+## Status
+
+Design placeholder / Long-term. Do not start full implementation before the core user-space labs are stronger.
+
 ## Goal
 
 A small Unix-like kernel for long-term learning.

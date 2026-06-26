@@ -1,5 +1,9 @@
 # 08 Real-Time Interference
 
+## Status
+
+Scaffolded. Experiments are designed but not implemented yet.
+
 ## Goal
 
 Measure how periodic task latency and jitter change under CPU, memory, cache, and I/O interference.

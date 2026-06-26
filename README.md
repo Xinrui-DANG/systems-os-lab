@@ -37,10 +37,9 @@ Memory
 |---|---|
 | `labs/` | Observable user-space experiments |
 | `mini-kernel/` | Long-term Unix-like kernel project |
-| `docs/` | Roadmap, concept maps, terminology, references |
+| `docs/` | Concept maps, terminology, curated notes, references |
 | `results/` | Cross-module experiment outputs |
-| `scripts/` | Repository-level automation |
-| `references/` | Papers, books, standards, and reading notes |
+| `tools/` | Repository-level helper tools |
 
 ## Roadmap
 
@@ -50,16 +49,27 @@ See [ROADMAP.md](ROADMAP.md) for the detailed learning plan.
 
 | Module | Status | Path |
 |---|---:|---|
+| Toolchain / measurement setup | Scaffolded | `labs/00_toolchain/` |
 | Memory hierarchy | Done | `labs/01_memory_hierarchy/` |
-| Virtual memory | Next | `labs/02_virtual_memory/` |
-| Process/thread/scheduler | Planned | `labs/03_process_thread_scheduler/` |
-| Syscall/interrupt | Planned | `labs/04_syscall_interrupt/` |
-| Synchronization | Planned | `labs/05_synchronization/` |
-| Storage/filesystem | Later | `labs/06_storage_filesystem/` |
-| Heterogeneous computing | Planned | `labs/07_heterogeneous_computing/` |
-| Real-time interference | Planned | `labs/08_realtime_interference/` |
-| Isolation/virtualization | Planned | `labs/09_isolation_virtualization/` |
-| Mini-kernel | Long-term | `mini-kernel/` |
+| Virtual memory | Scaffolded / Next implementation target | `labs/02_virtual_memory/` |
+| Process/thread/scheduler | Scaffolded | `labs/03_process_thread_scheduler/` |
+| Syscall/interrupt | Scaffolded | `labs/04_syscall_interrupt/` |
+| Synchronization | Scaffolded | `labs/05_synchronization/` |
+| Storage/filesystem | Scaffolded / Later | `labs/06_storage_filesystem/` |
+| Heterogeneous computing | Scaffolded | `labs/07_heterogeneous_computing/` |
+| Real-time interference | Scaffolded | `labs/08_realtime_interference/` |
+| Isolation/virtualization | Scaffolded | `labs/09_isolation_virtualization/` |
+| Mini-kernel | Design placeholder / Long-term | `mini-kernel/` |
+
+## Status Meaning
+
+| Status | Meaning |
+|---|---|
+| Done | Source code, build rules, results, and analysis exist |
+| Scaffolded | Experiment plan exists, implementation is not complete yet |
+| Next | Immediate implementation target |
+| Planned | Design exists, not current focus |
+| Long-term | Reserved for later integration work |
 
 ## Quick Start
 
@@ -67,6 +77,12 @@ Build the current completed lab:
 
 ```bash
 make
+```
+
+Show available targets:
+
+```bash
+make help
 ```
 
 Run it:

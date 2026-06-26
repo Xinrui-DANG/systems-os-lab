@@ -1,5 +1,9 @@
 # 03 Process / Thread / Scheduler
 
+## Status
+
+Scaffolded. Experiments are designed but not implemented yet.
+
 ## Goal
 
 Study process creation, thread creation, context switching, scheduling latency, priority inversion, and scheduler policy behavior.

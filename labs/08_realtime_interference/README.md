@@ -8,6 +8,8 @@ Scaffolded. Experiments are designed but not implemented yet.
 
 Measure how periodic task latency and jitter change under CPU, memory, cache, and I/O interference.
 
+Long-term, this module provides the timing-analysis side of GPU/NPU interference studies: average latency is not enough; the key question is whether worst-case response time can remain within a deadline.
+
 ## Core Questions
 
 1. What is the baseline latency of a periodic task?
@@ -26,6 +28,27 @@ Measure how periodic task latency and jitter change under CPU, memory, cache, an
 | `io_stress_interference.c` | How does I/O affect wakeups? | kernel and storage activity |
 | `latency_histogram.py` | How is latency distributed? | histogram |
 | `wcrt_analysis.py` | What is the worst observed response time? | WCRT analysis |
+
+## Long-Term Direction
+
+Future accelerator-aware analysis should model a task as:
+
+```text
+Task_i =
+  CPU segment
+  + DMA/copy segment
+  + GPU/NPU compute segment
+  + blocking
+  + interference
+```
+
+The long-term question is:
+
+```text
+R_i <= D_i ?
+```
+
+where `R_i` is response time and `D_i` is the deadline.
 
 ## Build
 

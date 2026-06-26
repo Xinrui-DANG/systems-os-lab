@@ -8,6 +8,8 @@ Scaffolded. Experiments and concept notes are designed but not implemented yet.
 
 Understand process isolation, memory protection, shared-memory channels, sandboxing, hypervisor concepts, and IOMMU/device isolation.
 
+Long-term, this module connects CPU process isolation to device isolation: GPU/NPU sharing only becomes meaningful for safety-critical systems when DMA, IOMMU mappings, memory ownership, and VM boundaries are controlled.
+
 ## Core Questions
 
 1. What does a process boundary protect?
@@ -62,3 +64,5 @@ See `analysis_zh.md`.
 ## Connection to Modern Systems
 
 Goal: understand how hypervisors and IOMMUs isolate OS instances and devices in automotive heterogeneous SoCs.
+
+For accelerator real-time systems, isolation must cover both compute resources and shared resources such as memory bandwidth, L2/LLC, copy engines, and DMA paths.

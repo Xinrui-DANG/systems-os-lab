@@ -8,6 +8,8 @@ Scaffolded. Experiments are designed but not implemented yet.
 
 Study how an operating system or runtime manages accelerators through shared memory, command queues, DMA, IOMMU-like isolation, scheduling, and interference control.
 
+Long-term, this module is the bridge toward GPU/NPU resource sharing, SM or partition-style allocation, command-queue scheduling, and accelerator runtime models. It does not currently claim to implement CUDA, MPS, MIG, or physical SM binding.
+
 ## Core Questions
 
 1. How can a device access memory without CPU load/store instructions?
@@ -27,6 +29,17 @@ Study how an operating system or runtime manages accelerators through shared mem
 | `memory_bandwidth_interference.c` | How can accelerators disturb CPU latency? | bandwidth contention |
 | `fake_gpu_scheduler.c` | How do multiple jobs compete for one accelerator? | device scheduling |
 | `iommu_concept_sim.c` | How can DMA be restricted? | IOMMU-like isolation |
+
+## Long-Term Direction
+
+Future experiments may study:
+
+- GPU kernel latency baseline, if hardware is available
+- concurrent GPU workload interference
+- command-queue scheduling policies
+- MPS/MIG/SM-limit behavior, if the platform supports it
+- memory bandwidth interference from accelerator-style workloads
+- simple accelerator response-time models
 
 ## Build
 

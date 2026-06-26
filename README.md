@@ -31,6 +31,18 @@ Memory
   -> Heterogeneous Runtime
 ```
 
+Long-term, the repository builds toward accelerator resource partitioning and real-time analysis:
+
+```text
+GPU/NPU resource sharing
+  -> DMA / IOMMU isolation
+  -> memory and cache interference
+  -> accelerator scheduling
+  -> WCRT / WCET-aware heterogeneous systems
+```
+
+This is a research direction, not a current implementation claim. See [docs/accelerator_realtime_goal.md](docs/accelerator_realtime_goal.md).
+
 ## Structure
 
 | Area | Purpose |

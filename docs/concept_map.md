@@ -14,6 +14,8 @@ Application Behavior
   -> Interference
   -> Isolation Boundary
   -> Device / Accelerator Runtime
+  -> Accelerator Resource Partitioning
+  -> WCRT / WCET-Aware Heterogeneous Scheduling
 ```
 
 ## Research Direction
@@ -24,6 +26,18 @@ Automotive heterogeneous SoC
   -> Hypervisor / Jailhouse-style partitioning
   -> IOMMU and DMA isolation
   -> GPU/NPU interference
+  -> SM / partition-style resource allocation
   -> WCRT/WCET degradation
   -> Runtime isolation
+```
+
+## Long-Term Research Target
+
+```text
+OS virtual memory
+  -> GPU virtual address / IOMMU / page migration
+  -> accelerator task isolation
+  -> memory-interference control
+  -> SM / GPU partitioning
+  -> real-time response-time analysis
 ```

@@ -16,6 +16,19 @@ Memory
   -> Heterogeneous Runtime
 ```
 
+The high-end research target is accelerator partitioning with real-time reasoning:
+
+```text
+GPU/NPU resource sharing
+  -> SM / partition-style allocation
+  -> DMA / IOMMU isolation
+  -> memory bandwidth and cache interference
+  -> accelerator scheduling
+  -> WCRT / WCET analysis
+```
+
+This is deliberately marked as long-term. The repository must first build the measurable OS foundations.
+
 ## Repository Layers
 
 ### Layer 1: Observable Labs
@@ -54,6 +67,8 @@ Connect the basic mechanisms to the research/industry direction:
 - hypervisor and IOMMU concepts
 - automotive heterogeneous SoC platforms
 - GPU/NPU/DMA interference
+- accelerator resource partitioning
+- SM / MIG / MPS-style sharing concepts
 - WCRT/WCET degradation
 - real-time jitter measurement
 
@@ -158,3 +173,12 @@ Application behavior
 ```
 
 That is the path from classic OS mechanisms toward an automotive heterogeneous trusted computing platform.
+
+Long-term research question:
+
+```text
+Can CPU/GPU/NPU tasks share heterogeneous resources while bounding interference
+and preserving real-time response-time requirements?
+```
+
+See [docs/accelerator_realtime_goal.md](docs/accelerator_realtime_goal.md).

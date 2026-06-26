@@ -1,41 +1,48 @@
 # Systems OS Lab
 
-A structured operating-system and computer-architecture lab repository.
+A structured operating-system and computer-architecture lab repository focused on memory hierarchy, virtual memory, process isolation, scheduling, real-time interference, and heterogeneous runtime behavior.
 
-一个系统化的操作系统与计算机体系结构实验仓库。
+一个围绕 **操作系统、计算机体系结构、运行时隔离、实时干扰、异构计算平台** 的系统实验仓库。
 
 ## Goal
 
-This repository follows the path from user programs to the kernel and hardware:
+This repository is not just a collection of OS demos. It is a systems portfolio path:
 
 ```text
-Program
-  -> Virtual Address
-  -> TLB / Page Table
-  -> Physical Address
-  -> L1 / L2 / L3 Cache
-  -> DRAM
-  -> Storage / File System
-  -> Process / Thread / Scheduler
-  -> IPC / Synchronization
-  -> Kernel / Driver / Mini OS
-  -> Virtualization / Isolation
+Application behavior
+  -> OS abstraction
+  -> hardware mechanism
+  -> timing effect
+  -> isolation boundary
+  -> heterogeneous runtime behavior
 ```
 
-## Roadmap
+It starts from classic OS mechanisms and moves toward automotive heterogeneous trusted computing platforms:
 
-1. Memory hierarchy
-2. Virtual memory
-3. Process and thread
-4. Scheduler and CPU affinity
-5. Synchronization
-6. IPC
-7. File system and I/O
-8. Signal, timer, and interrupt-like behavior
-9. Kernel module
-10. Mini Unix kernel
-11. RTOS experiments
-12. Virtualization and isolation
+```text
+Memory
+  -> Address Translation
+  -> Process Isolation
+  -> Syscall / Interrupt
+  -> Scheduling
+  -> Timing / Jitter
+  -> Interference
+  -> Isolation / Hypervisor
+  -> Heterogeneous Runtime
+```
+
+## Structure
+
+| Area | Purpose |
+|---|---|
+| `labs/` | Observable user-space experiments |
+| `mini-kernel/` | Long-term Unix-like kernel project |
+| `docs/` | Roadmap, concept maps, terminology, references |
+| `results/` | Cross-module experiment outputs |
+| `scripts/` | Repository-level automation |
+| `references/` | Papers, books, standards, and reading notes |
+
+## Roadmap
 
 See [ROADMAP.md](ROADMAP.md) for the detailed learning plan.
 
@@ -43,15 +50,16 @@ See [ROADMAP.md](ROADMAP.md) for the detailed learning plan.
 
 | Module | Status | Path |
 |---|---:|---|
-| Cache latency pointer chasing | Done | `labs/01_memory_hierarchy/cache_latency/` |
-| Sequential vs random access | Done | `labs/01_memory_hierarchy/sequential_vs_random/` |
-| Cache line effect | Done | `labs/01_memory_hierarchy/cache_line_effect/` |
-| False sharing | Done | `labs/01_memory_hierarchy/false_sharing/` |
-| Prefetch effect | Done | `labs/01_memory_hierarchy/prefetch_effect/` |
-| NUMA or L3 cluster | Done | `labs/01_memory_hierarchy/numa_or_l3_cluster/` |
-| TLB latency | Planned | `labs/02_virtual_memory/tlb_latency/` |
-| Process tree | Planned | `labs/03_process_thread/process_tree/` |
-| Context switch | Planned | `labs/03_process_thread/context_switch/` |
+| Memory hierarchy | Done | `labs/01_memory_hierarchy/` |
+| Virtual memory | Next | `labs/02_virtual_memory/` |
+| Process/thread/scheduler | Planned | `labs/03_process_thread_scheduler/` |
+| Syscall/interrupt | Planned | `labs/04_syscall_interrupt/` |
+| Synchronization | Planned | `labs/05_synchronization/` |
+| Storage/filesystem | Later | `labs/06_storage_filesystem/` |
+| Heterogeneous computing | Planned | `labs/07_heterogeneous_computing/` |
+| Real-time interference | Planned | `labs/08_realtime_interference/` |
+| Isolation/virtualization | Planned | `labs/09_isolation_virtualization/` |
+| Mini-kernel | Long-term | `mini-kernel/` |
 
 ## Quick Start
 
@@ -85,3 +93,9 @@ The standard lab questions are:
 4. How to reproduce it?
 5. What is the result?
 6. What does it prove or not prove?
+
+Each module should also answer:
+
+```text
+How does this mechanism appear in Linux, RTOS, hypervisors, IOMMU, or heterogeneous platforms?
+```

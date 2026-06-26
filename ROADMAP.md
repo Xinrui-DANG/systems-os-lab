@@ -75,7 +75,7 @@ File-system work is useful, but it is not the main line for this repository.
 
 | Module | Status | Main focus |
 |---|---:|---|
-| `00_toolchain` | Scaffolded | gcc, make, perf, taskset, lscpu, sysfs/procfs |
+| `00_toolchain` | Baseline implementation | gcc, make, perf, taskset, lscpu, sysfs/procfs |
 | `01_memory_hierarchy` | Done | cache, prefetch, cache line, false sharing, L3 topology |
 | `02_virtual_memory` | Scaffolded / Next | address layout, page fault, mmap, TLB, huge page, COW |
 | `03_process_thread_scheduler` | Scaffolded | fork/exec, context switch, scheduling latency, priority inversion |

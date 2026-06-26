@@ -2,11 +2,15 @@
 
 ## Status
 
-Scaffolded. The module defines the measurement setup plan; implementation will be added incrementally.
+Baseline implementation. It provides the measurement-environment checks used before interpreting later experiments.
 
 ## Goal
 
-Set up the measurement tools used by the rest of the repository.
+Set up and verify the measurement environment used by the rest of this repository.
+
+This module does not study one OS mechanism directly. Instead, it records the compiler, CPU topology, cache hierarchy, available performance counters, CPU affinity behavior, and basic timing assumptions used by later experiments.
+
+本模块不是研究某一个具体 OS 机制，而是为后续实验建立测量基准：编译器、CPU 拓扑、cache 层级、perf counter、CPU 亲和性、计时方式等。
 
 ## Core Questions
 
@@ -29,13 +33,31 @@ Set up the measurement tools used by the rest of the repository.
 make
 ```
 
+## Run
+
+```bash
+make run
+```
+
+Collect machine profile:
+
+```bash
+make profile
+```
+
+Probe perf events:
+
+```bash
+make perf
+```
+
 ## Results
 
-See `results/`.
+Generated outputs are stored in `results/`.
 
 ## Analysis
 
-Use this module to document machine-specific assumptions.
+See [analysis_zh.md](analysis_zh.md).
 
 ## Key Concepts
 
@@ -44,7 +66,13 @@ Use this module to document machine-specific assumptions.
 - perf events
 - sysfs
 - procfs
+- cache topology
+- performance counters
+- reproducibility
+- measurement baseline
 
 ## Connection to Modern Systems
 
 Measurement quality determines whether later claims about cache, TLB, scheduling latency, and interference are trustworthy.
+
+For real-time and heterogeneous systems, a result without machine profile, CPU placement, compiler flags, and timing method is usually not interpretable.

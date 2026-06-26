@@ -49,7 +49,7 @@ See [ROADMAP.md](ROADMAP.md) for the detailed learning plan.
 
 | Module | Status | Path |
 |---|---:|---|
-| Toolchain / measurement setup | Scaffolded | `labs/00_toolchain/` |
+| Toolchain / measurement setup | Baseline implementation | `labs/00_toolchain/` |
 | Memory hierarchy | Done | `labs/01_memory_hierarchy/` |
 | Virtual memory | Scaffolded / Next implementation target | `labs/02_virtual_memory/` |
 | Process/thread/scheduler | Scaffolded | `labs/03_process_thread_scheduler/` |
@@ -66,6 +66,7 @@ See [ROADMAP.md](ROADMAP.md) for the detailed learning plan.
 | Status | Meaning |
 |---|---|
 | Done | Source code, build rules, results, and analysis exist |
+| Baseline implementation | Measurement checks exist; generated raw profiles are not committed by default |
 | Scaffolded | Experiment plan exists, implementation is not complete yet |
 | Next | Immediate implementation target |
 | Planned | Design exists, not current focus |
@@ -83,6 +84,14 @@ Show available targets:
 
 ```bash
 make help
+```
+
+Collect the measurement baseline:
+
+```bash
+make run-lab00
+make profile
+make perf-baseline
 ```
 
 Run it:
